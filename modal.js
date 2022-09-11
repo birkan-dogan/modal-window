@@ -17,3 +17,12 @@ const closeModal = () => {
 
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+// handling keypress event
+
+document.addEventListener("keydown", (e) => {
+  // console.log(e);
+  if (e.keyCode === 27 && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
